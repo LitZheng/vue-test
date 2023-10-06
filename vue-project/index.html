@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+<title>My test page</title>
+</head>
+<script type="importmap">
+  {
+    "imports": {
+      "vue": "https://unpkg.com/vue@3/dist/vue.esm-browser.js",
+      "mycom": "./scripts/my-component.js"
+    }
+  }
+</script>
+
+<div id="app"></div>
+
+<script type="module">
+  import { createApp } from 'vue'
+  import { MyComponent } from 'mycom'
+
+  createApp(MyComponent).mount('#app')
+</script>
